@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvDolares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="15dp"
+        android:text="Dolares:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etDolares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDolares"
+        android:layout_alignLeft="@id/tvDolares"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvPesosArgentinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etDolares"
+        android:layout_alignLeft="@id/etDolares"
+        android:text="Pesos Argentinos:"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/etPesosArgentinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPesosArgentinos"
+        android:layout_alignLeft="@id/tvPesosArgentinos"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPesosArgentinos"
+        android:layout_alignLeft="@id/etPesosArgentinos"
+        android:text="Elija una opcion:"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"/>
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMensaje"
+        android:layout_alignLeft="@id/tvMensaje"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp">
+
+        <RadioButton
+            android:id="@+id/rbPesosArgentinos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Pesos Argentinos a Dolares"
+            android:onClick="activarRbPesoArgentino"
+            />
+
+        <RadioButton
+            android:id="@+id/rbDolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Dolares a Pesos Argentinos"
+            android:onClick="activarRbDolar"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvCambiarA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg1"
+        android:layout_alignLeft="@id/rg1"
+        android:layout_marginTop="15dp"
+        android:text="Cambio a..."
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tvCambiarA"
+        android:layout_below="@id/tvCambiarA"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/etResultado"
+        android:layout_below="@id/etResultado"
+        android:layout_marginTop="15dp"
+        android:text="Convertir"
+        android:onClick="convertir" />
+
+</RelativeLayout>
